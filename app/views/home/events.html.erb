@@ -1,0 +1,19 @@
+<div id="wrap">
+
+<div class="container">
+  <%= render :partial => "header" %>
+	<!-- ########################### MAIN ########################### -->
+<h3 class="section-title">Ultimos Eventos</h3>
+
+<div class="row">
+  <ul>
+  <% @events.each do |event| %> 
+    <li><a style="color:white" href= <%= event.link %> target="_blank" ><%= event.name %></a> </li>
+  <% end %>
+  </ul>
+  
+</div>
+
+
+
+</div>

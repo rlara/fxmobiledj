@@ -7,5 +7,9 @@ class HomeController < ApplicationController
 
   def gallery
   end
+  
+  def events
+    @events = Event.order('created_at DESC')
+  end
 
 end

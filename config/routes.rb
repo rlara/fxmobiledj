@@ -1,4 +1,7 @@
 Fxmobiledj::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -9,7 +12,7 @@ Fxmobiledj::Application.routes.draw do
   # Sample of named route:
   match 'acerca-de-nosotros' => 'home#about_us', :as => :about_us
   match 'galeria' => 'home#gallery', :as => :gallery
-
+  match 'ultimos-eventos' => 'home#events', :as => :ultimos_eventos
 
   # This route can be invoked with purchase_url(:id => product.id)
 
